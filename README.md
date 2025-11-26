@@ -157,13 +157,6 @@ Folder: `Theoretical_rates/`
 - `get_theoretical_threshold_powerlaw.m`  
   Computes theoretical thresholds and power-law exponents from the analytical bounds.
 
-### Old / legacy material
-
-Folder: `Old/`
-
-- `old_main.m`, `RHS.m`, `get_potential.m`, `switch_kernel.m`, `untitled*.m`, `power_law_decay_ex.pdf`  
-  Earlier or exploratory scripts. Not required for reproducing the final figures but kept as reference.
-
 ---
 
 ## Requirements
