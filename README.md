@@ -162,4 +162,84 @@ Folder: `Theoretical_rates/`
 
 ---
 
+## Getting started
+
+### Clone or download the repository
+
+    git clone https://github.com/QuanjunLang/error_analysis_GLE.git
+    cd error_analysis_GLE
+
+### Set up the MATLAB path
+
+In MATLAB, change the working directory to the repository root and run:
+
+    addpaths;   % add all subfolders to the MATLAB path
+
+### Run a core example
+
+Examples:
+
+    % Section 5.1: differential–integral inequality, exponential kernel
+    cd('Sec_5_1_diff_int_ineq');
+    first_order_loop_exp;
+
+    % Section 5.1: differential–integral inequality, power-law kernel
+    first_order_loop_powerlaw;
+
+    % Section 5.2: first-order GLE with exponential kernels
+    cd('../Sec_5_2_first_order_GLE');
+    main_first_order_exponential;
+
+    % Section 5.3: second-order GLE
+    cd('../Sec_5_3_second_order_GLE');
+    main_second_order_exp_loop;
+
+    % Section 5.4: first-order GLE with power-law kernels
+    cd('../Sec_5_4_first_order_GLE');
+    main_first_order_polwer_law_loop;
+
+Each script generates trajectories, computes Lyapunov distances or mean-square errors, and produces plots that correspond to figures in the paper. Some scripts load precomputed `.mat` files; these are included in the corresponding section folders.
+
+---
+
+## Modifying experiments
+
+- Adjust global system parameters in `system_info.m` and `update_sysInfo.m`.
+- Change kernel types and perturbations in `Kernels/kernel_info.m` (and `new_kernel_info_structure.m` when used).
+- For second-order systems, modify potentials in `Potentials/potential_info.m`.
+- Re-run the relevant `main_*.m` script to regenerate trajectories and plots.
+
+---
+
+## Reproducing figures and tables
+
+Rough mapping between paper sections and code:
+
+- **Section 5.1 (differential–integral inequality):**  
+  `Sec_5_1_diff_int_ineq/first_order_loop_exp.m` and `first_order_loop_powerlaw.m`.
+
+- **Section 5.2 (first-order GLE with exponential kernels):**  
+  `Sec_5_2_first_order_GLE/main_first_order_exponential.m` (and `main_first_order_exp.m`) together with `four_est_kernel_loop.m` and `ensemble_test_S_c2_C2.m`.
+
+- **Section 5.3 (second-order GLE):**  
+  `Sec_5_3_second_order_GLE/main_second_order_exp_loop.m` and `ensemble_test_second_order.m`.
+
+- **Section 5.4 (first-order GLE with power-law kernels):**  
+  `Sec_5_4_first_order_GLE/main_first_order_polwer_law_loop.m` and `ensemble_test_first_order.m`.
+
+The scripts in `Theoretical_rates/` and `Traj/plot_trajectory_decay_fit.m` are used across sections to fit empirical rates and compare them to the theoretical predictions.
+
+---
+
+## Citation
+
+If you use this code in your research or teaching, please cite:
+
+> Quanjun Lang and Jianfeng Lu, *Error Analysis of Generalized Langevin Dynamics with Approximated Memory Kernels*.
+
+---
+
+## License
+
+This project is released under the MIT License. See the `LICENSE` file for the full text.
 
