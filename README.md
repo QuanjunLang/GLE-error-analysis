@@ -123,8 +123,6 @@ Representative files:
 - `second_order_exp_data.mat`, `*_loop.mat`, `*_data*.mat`  
   Data files generated or used by the scripts.
 
-- `old_stuff/`  
-  Legacy scripts and experiments are retained for reference only.
 
 ### Section 5.4 – First-order GLE with power-law kernels
 
@@ -141,8 +139,6 @@ Representative files:
 - `*_loop.mat`, `*_data*.mat`  
   Data files for this section.
 
-- `old_stuff/`  
-  Additional helper or legacy scripts for this section.
 
 ### Theoretical rates
 
